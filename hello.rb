@@ -113,9 +113,20 @@
 # %s
 # %d
 # %f
-p "name: %s" % "taguchi"
-p "name: %10s" % "taguchi"
-p "name: %-10s" % "taguchi"
-p "id: %05d, rate: %10.2f" % [355, 3.284]
-p sprintf("name: %10s\n", "taguchi")
-p sprintf("id: %05d, rate: %10.2f\n", 355, 3.284)
+# p "name: %s" % "taguchi"
+# p "name: %10s" % "taguchi"
+# p "name: %-10s" % "taguchi"
+# p "id: %05d, rate: %10.2f" % [355, 3.284]
+# p sprintf("name: %10s\n", "taguchi")
+# p sprintf("id: %05d, rate: %10.2f\n", 355, 3.284)
+
+# if
+score = gets.to_i
+# if score > 80
+#   puts "great!"
+# elsif score > 60
+#   puts "good!"
+# else
+#   puts "so so ..."
+# end
+puts "great" if score > 90
