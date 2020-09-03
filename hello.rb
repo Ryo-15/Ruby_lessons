@@ -121,7 +121,7 @@
 # p sprintf("id: %05d, rate: %10.2f\n", 355, 3.284)
 
 # if
-score = gets.to_i
+# score = gets.to_i
 # if score > 80
 #   puts "great!"
 # elsif score > 60
@@ -129,4 +129,17 @@ score = gets.to_i
 # else
 #   puts "so so ..."
 # end
-puts "great" if score > 90
+# puts "great" if score > 90
+
+# case
+signal = gets.chomp
+case signal
+when "red"
+  puts "stop!"
+when "green", "blue"
+  puts "go!"
+when "yellow"
+  puts "caution!"
+else
+  puts "wrong signal"
+end
