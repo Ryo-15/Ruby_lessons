@@ -78,17 +78,25 @@
 # p colors.sort
 
 # ハッシュ
-
 # taguchi 200
 # fkoji 400
-scores = {"taguchi" => 200, "fkoji" => 400}
-scores = {:taguchi => 200, :fkoji => 400}
-scores = {taguchi: 200, fkoji: 400}
+# scores = {"taguchi" => 200, "fkoji" => 400}
+# scores = {:taguchi => 200, :fkoji => 400}
+# scores = {taguchi: 200, fkoji: 400}
+# p scores[:taguchi]
+# scores[:fkoji] = 600
+# p scores
+# p scores.size
+# p scores.keys
+# p scores.values
+# p scores.has_key?(:taguchi)
 
-p scores[:taguchi]
-scores[:fkoji] = 600
-p scores
-p scores.size
-p scores.keys
-p scores.values
-p scores.has_key?(:taguchi)
+# 変換
+x = 50
+y = "3"
+p x + y.to_i
+p x + y.to_f
+p x.to_s + y
+scores = {taguchi: 200, fkoji: 400}
+p scores.to_a
+p scores.to_a.to_h
