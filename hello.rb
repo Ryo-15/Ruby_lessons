@@ -51,12 +51,29 @@
 # puts "hello " * 10
 
 # !は破壊的メソッド
-name = "taguchi"
+# name = "taguchi"
 # puts name.upcase
 # puts name
 # puts name.upcase!
 # puts name
 
 # ?は真偽値を返すメソッド
-p name.empty?
-p name.include?("g")
+# p name.empty?
+# p name.include?("g")
+
+# 配列
+colors = ["red", "blue", "yellow"]
+# p colors[0] #添字
+# p colors[-1]
+# p colors[0..2]
+# p colors[0...2]
+# p colors[5]
+
+colors[0] = "pink"
+colors[1..2] = ["white", "black"]
+colors.push("gold")
+colors << "silver"
+p colors
+p colors.size
+p colors.sort
+
