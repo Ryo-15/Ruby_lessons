@@ -62,18 +62,33 @@
 # p name.include?("g")
 
 # 配列
-colors = ["red", "blue", "yellow"]
+# colors = ["red", "blue", "yellow"]
 # p colors[0] #添字
 # p colors[-1]
 # p colors[0..2]
 # p colors[0...2]
 # p colors[5]
 
-colors[0] = "pink"
-colors[1..2] = ["white", "black"]
-colors.push("gold")
-colors << "silver"
-p colors
-p colors.size
-p colors.sort
+# colors[0] = "pink"
+# colors[1..2] = ["white", "black"]
+# colors.push("gold")
+# colors << "silver"
+# p colors
+# p colors.size
+# p colors.sort
 
+# ハッシュ
+
+# taguchi 200
+# fkoji 400
+scores = {"taguchi" => 200, "fkoji" => 400}
+scores = {:taguchi => 200, :fkoji => 400}
+scores = {taguchi: 200, fkoji: 400}
+
+p scores[:taguchi]
+scores[:fkoji] = 600
+p scores
+p scores.size
+p scores.keys
+p scores.values
+p scores.has_key?(:taguchi)
