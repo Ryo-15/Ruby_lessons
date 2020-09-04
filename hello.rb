@@ -214,16 +214,31 @@
 # p sayHi("tagucho")
 
 class User
+  attr_accessor :name
+
   def initialize(name)
     @name = name
   end
   
   def sayHi
     puts "hi! i am #{@name}"
+    puts "hi! i am #{self.name}"
+    puts "hi! i am #{name}"
   end
+
+  def self.info
+    puts "User class"
+  end
+  
 end
 
-tom = User.new("tom")
-tom.sayHi
-bob = User.new("bob")
-bob.sayHi
+# tom = User.new("tom")
+# tom.sayHi
+# bob = User.new("bob")
+# bob.sayHi
+
+# tom.name = "tom Jr."
+# p tom.name
+
+User.info
+
