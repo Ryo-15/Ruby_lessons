@@ -144,17 +144,38 @@
 #   puts "wrong signal"
 # end
 
-# while
-i = 0
-while i < 10 do
-  puts "#{i}: hello"
-  # i = i + 1
-  i += 1
+# # while
+# i = 0
+# while i < 10 do
+#   puts "#{i}: hello"
+#   # i = i + 1
+#   i += 1
+# end
+
+# # times
+# 10.times do |i|
+#   puts "#{i}: hello"
+# end
+# 10.times { |i| puts "#{i}: hello" }
+
+# for
+for i in 15..20 do
+  p i
+end
+for color in ["red", "blue"] do
+  p color
+end
+for name, score in {taguchi:200, fkoji:400} do
+  puts "#{name}: #{score}"
 end
 
-# times
-10.times do |i|
-  puts "#{i}: hello"
+# each
+(15..20).each do |i|
+  p i
 end
-
-10.times { |i| puts "#{i}: hello" }
+["red", "blue"].each do |color|
+  p color
+end
+{taguchi:200, fkoji:400}.each do |name, score|
+  puts "#{name}: #{score}"
+end
