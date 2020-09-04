@@ -216,7 +216,11 @@
 class User
   attr_accessor :name
 
+  @@count = 0
+  VERSION = 1
+
   def initialize(name)
+    @@count += 1
     @name = name
   end
   
@@ -227,7 +231,7 @@ class User
   end
 
   def self.info
-    puts "User class"
+    puts "#{VERSION}: User class, #{@@count} instances."
   end
   
 end
@@ -240,5 +244,9 @@ end
 # tom.name = "tom Jr."
 # p tom.name
 
+tom = User.new("tom")
+bob = User.new("bob")
+steve = User.new("steve")
 User.info
+p User::VERSION
 
