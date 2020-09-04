@@ -187,17 +187,28 @@
 #   i += 1
 # end
 
-# break
-# next
-10.times do |i|
-  if i == 7
-    break
-  end
-  p i
-end
-10.times do |i|
-  if i == 7
-    next
-  end
-  p i
-end
+# # break
+# # next
+# 10.times do |i|
+#   if i == 7
+#     break
+#   end
+#   p i
+# end
+# 10.times do |i|
+#   if i == 7
+#     next
+#   end
+#   p i
+# end
+
+# # メソッド
+# def sayHi(name = "tom")
+#   # puts "Hi! #{name}"
+#   return "Hi! #{name}"
+# end
+
+# sayHi("taguchi")
+# sayHi
+
+# p sayHi("tagucho")
