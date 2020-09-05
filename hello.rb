@@ -216,28 +216,37 @@
 
 # クラス
 # クラスの継承
+# アクセス権
 class User
   attr_accessor :name
 
-  @@count = 0
-  VERSION = 1
+  # @@count = 0
+  # VERSION = 1
 
-  def initialize(name)
-    @@count += 1
-    @name = name
-  end
-  
+  # def initialize(name)
+  #   @@count += 1
+  #   @name = name
+  # end
+
   def sayHi
     puts "hi! i am #{@name}"
     puts "hi! i am #{self.name}"
     puts "hi! i am #{name}"
+    sayPrivate
   end
 
   def self.info
     puts "#{VERSION}: User class, #{@@count} instances."
   end
-  
+
+  private
+
+    def sayPrivate
+      puts "private"
+    end
 end
+
+User.new.sayHi
 
 # tom = User.new("tom")
 # tom.sayHi
@@ -247,16 +256,17 @@ end
 # tom.name = "tom Jr."
 # p tom.name
 
-tom = User.new("tom")
-bob = User.new("bob")
-steve = User.new("steve")
-User.info
-p User::VERSION
+# tom = User.new("tom")
+# bob = User.new("bob")
+# steve = User.new("steve")
+# User.info
+# p User::VERSION
 
 class AdminUser < User
 
   def sayHello
     puts "Hello from #{@name}"
+    sayPrivate
   end
 
   def sayHi
@@ -264,6 +274,7 @@ class AdminUser < User
   end
 end
 
-tom = AdminUser.new("tom")
-tom.sayHi
-tom.sayHello
+# tom = AdminUser.new("tom")
+# tom.sayHi
+# tom.sayHello
+AdminUser.new.sayHello
