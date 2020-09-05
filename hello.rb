@@ -213,6 +213,9 @@
 
 # p sayHi("tagucho")
 
+
+# クラス
+# クラスの継承
 class User
   attr_accessor :name
 
@@ -250,3 +253,17 @@ steve = User.new("steve")
 User.info
 p User::VERSION
 
+class AdminUser < User
+
+  def sayHello
+    puts "Hello from #{@name}"
+  end
+
+  def sayHi
+    puts "hi! from admin!"
+  end
+end
+
+tom = AdminUser.new("tom")
+tom.sayHi
+tom.sayHello
