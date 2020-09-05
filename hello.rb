@@ -289,21 +289,41 @@
   
 # end
 
-module Movie
+# module Movie
 
-  VERSION = 1.1
+#   VERSION = 1.1
 
-  def self.encode
-    puts "encoding..."
+#   def self.encode
+#     puts "encoding..."
+#   end
+
+#   def self.export
+#     puts "exporting..."
+#   end
+# end
+
+# Movie.encode
+# Movie.export
+
+# p Movie::VERSION
+
+
+
+# module
+# ミックスイン
+module Debug
+  def info
+    puts "#{self.class} debug info ..."
   end
-
-  def self.export
-    puts "exporting..."
-  end
+  
+end
+class Player
+  include Debug
 end
 
-Movie.encode
-Movie.export
+class Monster
+  include Debug
+end
 
-p Movie::VERSION
-
+Player.new.info
+Monster.new.info
