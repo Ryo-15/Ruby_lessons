@@ -214,11 +214,11 @@
 # p sayHi("tagucho")
 
 
-# クラス
-# クラスの継承
-# アクセス権
-class User
-  attr_accessor :name
+# # クラス
+# # クラスの継承
+# # アクセス権
+# class User
+#   attr_accessor :name
 
   # @@count = 0
   # VERSION = 1
@@ -228,25 +228,25 @@ class User
   #   @name = name
   # end
 
-  def sayHi
-    puts "hi! i am #{@name}"
-    puts "hi! i am #{self.name}"
-    puts "hi! i am #{name}"
-    sayPrivate
-  end
+#   def sayHi
+#     puts "hi! i am #{@name}"
+#     puts "hi! i am #{self.name}"
+#     puts "hi! i am #{name}"
+#     sayPrivate
+#   end
 
-  def self.info
-    puts "#{VERSION}: User class, #{@@count} instances."
-  end
+#   def self.info
+#     puts "#{VERSION}: User class, #{@@count} instances."
+#   end
 
-  private
+#   private
 
-    def sayPrivate
-      puts "private"
-    end
-end
+#     def sayPrivate
+#       puts "private"
+#     end
+# end
 
-User.new.sayHi
+# User.new.sayHi
 
 # tom = User.new("tom")
 # tom.sayHi
@@ -262,19 +262,48 @@ User.new.sayHi
 # User.info
 # p User::VERSION
 
-class AdminUser < User
+# class AdminUser < User
 
-  def sayHello
-    puts "Hello from #{@name}"
-    sayPrivate
-  end
+#   def sayHello
+#     puts "Hello from #{@name}"
+#     sayPrivate
+#   end
 
-  def sayHi
-    puts "hi! from admin!"
-  end
-end
+#   def sayHi
+#     puts "hi! from admin!"
+#   end
+# end
 
 # tom = AdminUser.new("tom")
 # tom.sayHi
 # tom.sayHello
-AdminUser.new.sayHello
+# AdminUser.new.sayHello
+
+
+# # module
+# # 名前空間
+# def movie_encode
+  
+# end
+# def movie_export
+  
+# end
+
+module Movie
+
+  VERSION = 1.1
+
+  def self.encode
+    puts "encoding..."
+  end
+
+  def self.export
+    puts "exporting..."
+  end
+end
+
+Movie.encode
+Movie.export
+
+p Movie::VERSION
+
